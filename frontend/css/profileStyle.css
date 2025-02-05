@@ -1,0 +1,86 @@
+/* General body and layout styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #2e2828;
+    color: white;
+    padding: 20px;
+}
+
+/* Profile Container Styling */
+.profile-container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.profile-details p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#deleteAccount {
+    background-color: #ff0000;
+}
+
+/* Profile Actions */
+.profile-actions {
+    display: flex;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2e2828;
+    color: white;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Ensure footer spans across the width of the page */
+}

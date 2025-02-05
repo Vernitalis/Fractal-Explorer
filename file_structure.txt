@@ -1,0 +1,43 @@
+project/
+├── backend/
+│   ├── server.js
+│   ├── config/
+│   │   └── db.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── fractalRoutes.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   └── fractalController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Fractal.js
+├── frontend/
+│   ├── index.html
+│   ├── register.html
+│   ├── login.html
+│   ├── profile.html
+│   ├── fractal.html
+│   ├── resources/
+│   │   ├── burning_ship_image.jpg
+│   │   ├── julia_set_image.jpg
+│   │   ├── mandelbrot_animation.gif
+│   │   ├── mandelbrot_image.jpg
+│   ├── css/
+│   │   ├── fractalStyle.css
+│   │   ├── indexStyle.css
+│   │   ├── loginStyle.css
+│   │   ├── profileStyle.css
+│   │   ├── refisterStyle.css
+│   │   └── style.css
+│   └── js/
+│       ├── main.js 
+│       ├── auth.js
+│       ├── fractal.js
+│       ├── profile.js  
+│       └── worker.js
+├── .env
+├── package.json
+└── README.md

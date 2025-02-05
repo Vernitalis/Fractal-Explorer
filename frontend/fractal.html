@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Fractals</title>
+    <link rel="stylesheet" href="./css/fractalStyle.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Interactive Fractals</h1>
+        <p>Explore fascinating fractals by adjusting parameters and zooming in!</p>
+    </header>
+
+    <main class="main-container">
+        <div class="sidebar">
+            <button onclick="window.location.href='index.html'" class="home-button">Go to Home</button>
+            <h3>Saved Fractals:</h3>
+            <ul id="savedFractals"></ul>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="fractalCanvas" width="800" height="600"></canvas>
+        </div>
+
+        <div class="controls-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="fractalType">Fractal Type:</label>
+                    <select id="fractalType">
+                        <option value="mandelbrot">Mandelbrot</option>
+                        <option value="julia">Julia</option>
+                        <option value="burningShip">Burning Ship</option>
+                    </select>
+                </div>
+
+                <div class="control-group" id="juliaSettings" style="display: none;">
+                    <label for="cRe">Julia Re:</label>
+                    <input type="number" id="cRe" step="0.01" value="-0.8">
+                    <label for="cIm">Julia Im:</label>
+                    <input type="number" id="cIm" step="0.001" value="0.156">
+                    <button id="resetJuliaParams" class="button-primary">Reset Params</button>
+                </div>
+
+                <div class="control-group">
+                    <label for="iterations">Max Iterations:</label>
+                    <input type="range" id="iterations" min="25" max="700" value="300">
+                    <span id="iterationsValue">300</span>
+                </div>
+
+                <div class="control-group">
+                    <label for="colorScheme">Color Scheme:</label>
+                    <select id="colorScheme">
+                        <option value="grayscale">Grayscale</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="blue-yellow">Blue-Yellow</option>
+                        <option value="fire">Fire</option>
+                        <option value="cool">Cool</option>
+                        <option value="pastel">Pastel</option>
+                        <option value="custom">Custom</option>
+                    </select>
+
+                    <div id="customColorInputs" style="display: none;">
+                        <label for="startColor">Start Color:</label>
+                        <input type="color" id="startColor" value="#0000FF">
+                        <label for="endColor">End Color:</label>
+                        <input type="color" id="endColor" value="#FF0000">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="zoomFactor">Zoom Factor:</label>
+                    <input type="range" id="zoomFactor" min="1.01" max="1.5" step="0.01" value="1.1">
+                    <span id="zoomFactorValue">1.1</span>
+                </div>
+
+                <div class="control-group">
+                    <button id="zoomAnimation" class="button-primary">Start Zoom Animation</button>
+                </div>
+
+                <div class="control-group">
+                    <button id="resetView" class="button-primary">Reset Fractal</button>
+                </div>
+
+                <div class="control-group">
+                    <button id="saveFractal" class="button-primary">Save Fractal</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Interactive Fractals</p>
+    </footer>
+
+    <script src="./js/fractal.js"></script>
+</body>
+
+</html>
